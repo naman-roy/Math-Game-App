@@ -61,7 +61,6 @@ public class Addition extends AppCompatActivity {
 
             userAnswer= Integer.parseInt(answer.getText().toString());
             pauseTimer();
-            resetTimer();
 
             if (userAnswer==correctAnswer){
                 userScore+=10;
@@ -112,7 +111,7 @@ public class Addition extends AppCompatActivity {
 
     //Game Timer
     public  void startTimer(){
-        timer= new CountDownTimer(time_left_in_milis,1000) {
+        timer= new CountDownTimer(time_left_in_milis,60000) {
             @Override
             public void onTick(long l) {
                 time_left_in_milis=l;
